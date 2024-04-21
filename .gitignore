@@ -1,3 +1,4 @@
 dataset/
 saved_model/
 .env
+data_base/
