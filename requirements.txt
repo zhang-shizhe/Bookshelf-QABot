@@ -23,4 +23,4 @@ unstructured==0.12.6
 chromadb==0.4.14
 markdown==3.6
 spark-ai-python==0.3.15
-langchain-openai==0.1.3S
+langchain-openai==0.1.3
