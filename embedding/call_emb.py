@@ -14,4 +14,4 @@ def get_embedding(embedding: str, embedding_key: str=None, env_file: str=None):
     if embedding == "openai":
         return OpenAIEmbeddings(openai_api_key=embedding_key)
     else:
-        raise ValueError(f"embedding {embedding} not support ")
+        raise ValueError(f"embedding {embedding} not supported")
