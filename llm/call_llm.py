@@ -34,4 +34,4 @@ def parse_llm_api_key(model:str, env_file:dict=None):
     if model == "openai":
         return env_file["OPENAI_API_KEY"]
     else:
-        raise ValueError(f"model{model} not support!!!")
+        raise ValueError(f"model {model} not support!!!")
