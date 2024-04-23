@@ -18,8 +18,9 @@ class QA_chain():
     '''
 
     # default_template_based on the retrieved results and user query
-    default_template_rq = """Use the following context to answer the final question. 
+    default_template_rq = """Refer to the following context to answer the final question. 
     If you don't know the answer, just say you don't know and don't try to make up the answer. 
+    If the questioin is not relevant to the context, just say it is not relevant.
     Use a maximum of five sentences. Try to keep your answers concise and to the point. 
     Always end your answer with "Hope my answer helps!"
     {context}
@@ -61,15 +62,9 @@ class QA_chain():
                                         return_source_documents=True,
                                         chain_type_kwargs={"prompt":self.qa_chain_prompt})
 
-    #基于大模型的问答 prompt 使用的默认提示模版
-    #default_template_llm = """请回答下列问题:{question}"""
+
            
     def answer(self, question:str=None, temperature=None, top_k=None):
-        """"
-        核心方法，调用问答链
-        arguments: 
-        - question：用户提问
-        """
 
         if len(question) == 0:
             return ""
@@ -80,7 +75,12 @@ class QA_chain():
         if top_k == None:
             top_k = self.top_k
 
-        result = self.qa_chain({"query": question, "temperature": temperature, "top_k": top_k})
+        result = self.qa_chain.invoke({"query": question, "temperature": temperature, "top_k": top_k})
         answer = result["result"]
         answer = re.sub(r"\\n", '<br/>', answer)
         return answer   
+    
+
+if __name__ == "__main__":
+    qa_chain = QA_chain(model="gpt-3.5-turbo", persist_path='vector_db', file_path='data')
+    print(qa_chain.answer('tell me how to install linux on rog laptop'))

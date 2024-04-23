@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv, find_dotenv
-from langchain_community.chat_models import ChatOpenAI
+# from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 
 
 def init_llm(model:str=None, temperature:float=0.0, api_key:str=None):
