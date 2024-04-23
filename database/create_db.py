@@ -70,7 +70,13 @@ def create_db(files=DEFAULT_DB_PATH, persist_directory=DEFAULT_PERSIST_PATH, emb
     vectordb.persist()
     return vectordb
 
-
+def load_knowledge_db(path, embeddings):
+    
+    vectordb = Chroma(
+        persist_directory=path,
+        embedding_function=embeddings
+    )
+    return vectordb
 
 if __name__ == "__main__":
-    create_db(embeddings="m3e")
+    create_db()
