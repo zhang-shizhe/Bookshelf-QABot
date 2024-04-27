@@ -1,5 +1,7 @@
 import sys
-sys.path.append("../")
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+# print(sys.path)
 
 import os
 from database.create_db import create_db,load_knowledge_db

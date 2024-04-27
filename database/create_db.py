@@ -77,7 +77,6 @@ def load_knowledge_db(path, embeddings):
         persist_directory=path,
         embedding_function=embeddings
     )
-    print(type(vectordb))
     return vectordb
 
 if __name__ == "__main__":

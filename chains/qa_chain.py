@@ -12,7 +12,7 @@ from get_vectordb import get_vectordb
 import sys
 import re
 
-class QA_chain():
+class QA_Chain():
     '''
     QA chain with out historical conversion
     '''
@@ -34,8 +34,8 @@ class QA_chain():
             file_path:str=None, 
             persist_path:str=None, 
             api_key:str=None, 
-            embedding = "openai",  
-            embedding_key = None, 
+            embedding="openai",  
+            embedding_key:str=None, 
             template=default_template_rq
             ):
         self.model = model
@@ -69,10 +69,10 @@ class QA_chain():
         if len(question) == 0:
             return ""
         
-        if temperature == None:
+        if temperature is None:
             temperature = self.temperature
             
-        if top_k == None:
+        if top_k is None:
             top_k = self.top_k
 
         result = self.qa_chain.invoke({"query": question, "temperature": temperature, "top_k": top_k})
@@ -83,4 +83,4 @@ class QA_chain():
 
 if __name__ == "__main__":
     qa_chain = QA_chain(model="gpt-3.5-turbo", persist_path='vector_db', file_path='data')
-    print(qa_chain.answer('tell me how to install linux on rog laptop'))
+    print(qa_chain.answer('what is the height of the tallest man'))
