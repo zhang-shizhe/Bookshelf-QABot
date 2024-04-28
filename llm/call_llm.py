@@ -1,6 +1,8 @@
 import openai
 from dotenv import load_dotenv, find_dotenv
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 def get_completion(prompt :str, model :str, temperature=0.1,api_key=None, secret_key=None, access_token=None, appid=None, api_secret=None, max_tokens=2048):
 

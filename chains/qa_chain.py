@@ -7,8 +7,8 @@ import os
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
 
-from init_llm import init_llm
-from get_vectordb import get_vectordb
+from chains.init_llm import init_llm
+from chains.get_vectordb import get_vectordb
 import sys
 import re
 
@@ -82,5 +82,5 @@ class QA_Chain():
     
 
 if __name__ == "__main__":
-    qa_chain = QA_chain(model="gpt-3.5-turbo", persist_path='vector_db', file_path='data')
+    qa_chain = QA_Chain(model="gpt-3.5-turbo", persist_path='vector_db/chroma', file_path='data')
     print(qa_chain.answer('what is the height of the tallest man'))

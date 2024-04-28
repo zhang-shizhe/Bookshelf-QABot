@@ -60,7 +60,7 @@ def create_db(files=DEFAULT_DB_PATH, persist_directory=DEFAULT_PERSIST_PATH, emb
     if type(embeddings) == str:
         embeddings = get_embedding(embedding=embeddings)
     # define persistent path
-    persist_directory = './vector_db/chroma'
+    persist_directory = '../vector_db/chroma'
     # load db
     vectordb = Chroma.from_documents(
     documents=split_docs,
