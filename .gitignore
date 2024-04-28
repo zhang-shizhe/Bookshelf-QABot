@@ -1,5 +1,5 @@
 dataset/
 saved_model/
 .env
-data_base/
+data/
 __pycache__/
