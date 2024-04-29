@@ -1,6 +1,6 @@
 from langchain.chains import ConversationalRetrievalChain
-from init_llm import init_llm
-from get_vectordb import get_vectordb
+from chains.init_llm import init_llm
+from chains.get_vectordb import get_vectordb
 import re
 
 class Conversation_QA_Chain:

@@ -10,9 +10,6 @@ sys.path.append(project_root)
 
 from chains.qa_chain import QA_Chain
 
-# os.environ["HTTP_PROXY"] = "http://127.0.0.1:7890"
-# os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7890"
-
 # from llm.call_llm import parse_llm_api_key
 # API_KEY =  parse_llm_api_key('openai')
 

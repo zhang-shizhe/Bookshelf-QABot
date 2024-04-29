@@ -21,9 +21,10 @@ class QA_Chain():
     default_template_rq = """Refer to the following context to answer the final question. 
     If you don't know the answer, just say you don't know and don't try to make up the answer. 
     If the questioin is not relevant to the context, just say it is not relevant.
-    Use a maximum of five sentences. Try to keep your answers concise and to the point. 
+    If you do not receive any context, just say "No relavent documents found".
+    Try to keep your answers concise and to the point. 
     Always end your answer with "Hope my answer helps!"
-    {context}
+    context: {context}
     question: {question}
     correct answer:"""
 
