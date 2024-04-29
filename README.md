@@ -1,7 +1,5 @@
 # Bookshelf-QABot
 
-
-# Personal Knowledge Base Assistant Project
 **Welcome to Bookshelf-QABot, it is a Personal Knowledge Base Assistant Project, a RAG solution** designed to streamline your access to vast amounts of information quickly and accurately using the power of large language models. This versatile tool is perfect for researchers, business owners, and anyone in need of efficient information management. Its scalability makes it ideal for businesses looking to enhance their customer service capabilities, providing quick and accurate responses to customer inquiries. Whether you are optimizing individual productivity or enhancing a business operation, this project is tailored for you.
 
 
