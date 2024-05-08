@@ -4,8 +4,8 @@ sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 # print(sys.path)
 
 import os
-from database.create_db import create_db,load_knowledge_db
-from embedding.call_emb import get_embedding
+from utils.create_db import create_db,load_knowledge_db
+from utils.call_emb import get_embedding
 
 def get_vectordb(file_path:str=None, persist_path:str=None, embedding="openai",embedding_key:str=None):
     

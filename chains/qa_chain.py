@@ -7,8 +7,8 @@ import os
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
 
-from chains.init_llm import init_llm
-from chains.get_vectordb import get_vectordb
+from utils.init_llm import init_llm
+from utils.get_vectordb import get_vectordb
 import sys
 import re
 

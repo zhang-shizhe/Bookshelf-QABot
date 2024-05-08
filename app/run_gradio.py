@@ -7,8 +7,8 @@ import IPython.display
 import io
 import gradio as gr
 from dotenv import load_dotenv, find_dotenv
-from llm.call_llm import get_completion
-from database.create_db import create_db
+from utils.call_llm import get_completion
+from utils.create_db import create_db
 from chains.conversation_qa_chain import Conversation_QA_Chain
 from chains.qa_chain import QA_Chain
 import re
